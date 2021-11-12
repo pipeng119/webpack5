@@ -22,31 +22,34 @@ module.exports = {
              * */
             test: /\.js$/,
             exclude: /node_moduels/,
-            loader: 'babel-loader',
-            options: {
-                // 预设：指示babel做怎样的兼容性处理
-                presets: [
-                    [
-                        // 基本语法的兼容
-                        '@babel/preset-env',
-                        {
-                            // 按需家加载
-                            useBuiltIns: 'usage',
-                            // 指定core-js版本
-                            corejs: {
-                                version: 3
-                            },
-                            targets: {
-                                chrome: '60',
-                                firefox: '60',
-                                ie: '9',
-                                safari: '10',
-                                edge: '17'
-                            }
-                        }
-                    ]
-                ]
+            // loader: 'babel-loader',
+            use: {
+                loader: 'babel-loader'
             }
+            // options: {
+            //     // 预设：指示babel做怎样的兼容性处理
+            //     presets: [
+            //         [
+            //             // 基本语法的兼容
+            //             '@babel/preset-env',
+            //             {
+            //                 // 按需家加载
+            //                 useBuiltIns: 'usage',
+            //                 // 指定core-js版本
+            //                 corejs: {
+            //                     version: 3
+            //                 },
+            //                 targets: {
+            //                     chrome: '60',
+            //                     firefox: '60',
+            //                     ie: '9',
+            //                     safari: '10',
+            //                     edge: '17'
+            //                 }
+            //             }
+            //         ]
+            //     ]
+            // }
         }]
     },
     plugins: [
