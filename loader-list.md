@@ -10,3 +10,4 @@
 4. MiniCssExtractPlugin.loader 将css代码提取成单独的css文件，配合MiniCssExtractPlugin一起使用
 4. postcss-loader 可以处理css兼容性问题
 4. babel-loader js兼容性处理
+4. html-loader 处理html中的图片资源

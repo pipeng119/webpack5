@@ -27,6 +27,7 @@ module.exports = {
                 // 预设：指示babel做怎样的兼容性处理
                 presets: [
                     [
+                        // 基本语法的兼容
                         '@babel/preset-env',
                         {
                             // 按需家加载

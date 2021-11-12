@@ -1,0 +1,11 @@
+html,
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: purple;
+}
+
+body {
+    background: url('../images/走了一后再夸我.jpg') no-repeat;
+}
