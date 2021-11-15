@@ -22,10 +22,7 @@ module.exports = {
              * */
             test: /\.js$/,
             exclude: /node_moduels/,
-            // loader: 'babel-loader',
-            use: {
-                loader: 'babel-loader'
-            }
+            loader: 'babel-loader',
             // options: {
             //     // 预设：指示babel做怎样的兼容性处理
             //     presets: [

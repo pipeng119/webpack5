@@ -21,4 +21,14 @@
          
 
         使用`contenthash`，根据文件的内容生成的hash值，不同的文件`hash`值一定不同
+    3. 使用`tree shaking`
+
+        前提
+
+        - 必须使用es6模块化
+        - 开启production模式构建
+        - 作用: 减少build后的代码体积
+        - 可能会产生的问题: 在`package.js`中添加`sideEffects:false` (所有代码都可以进行tree shaking)
+        - 可能会把css、less、polyfill等文件干掉
+        - 改成`sideEffects:['*.css','*.less']` 
 * 优化代码运行的性能
