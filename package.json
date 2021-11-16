@@ -33,7 +33,10 @@
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  },
   "browserslist": {
     "development": [
       "last 1 chrome version"
