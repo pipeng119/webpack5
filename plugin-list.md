@@ -54,3 +54,37 @@
      new EslintWebpackPlugin(options)
      ```
 
+5. workbox-webpack-plugin
+   
+   - 启用PWA
+   - 可以实现部分离线缓存
+   - sw只能运行在服务器中
+   - 需要在入口文件注册`serviceworker`
+    ```js
+      // 简易版本
+      if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+                .then(() => {
+                    console.log('sw注册成功')
+                })
+                .catch(() => {
+                    console.log('sw注册失败')
+                })
+        })
+      }
+    ```
+
+    ```js
+    new WorkboxWebpackPlugin.GenerateSW({
+            /**
+             * 1. 帮助serviceworker快速启动
+             * 2. 删除旧的serviceworker
+             * 
+             * 生成一个serviceworker配置文件 
+             *
+             */
+            clientsClaim: true,
+            skipWaiting: true
+        })
+    ```
